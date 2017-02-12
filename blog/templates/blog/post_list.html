@@ -9,16 +9,11 @@
             <h1><a href="">Django Girls Blog</a></h1>
         </div>
 
-        <div>
-            <p>publicado: 14.06.2014, 12:14</p>
-            <h2><a href="">Mi Primer Post</a></h2>
-            <p>Este es el primer post que he agregado a mi primer blog hecho con python y django , y funciona , Despues de muchos errores y de haberla embarrado tanto, Funciona , yeih !.</p>
-        </div>
-
-        <div>
-            <p>publicado: 14.06.2014, 12:14</p>
-            <h2><a href="">Mi Segundo Post</a></h2>
-            <p>Este es el segundo post que he agregado a mi primer blog hecho con python y django , y funciona , Despues de muchos errores y de haberla embarrado tanto, Funciona , yeih !.</p>
-        </div>
+       <div>
+        <p>publicado: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    	</div>
+        
 </body>
 </html>
